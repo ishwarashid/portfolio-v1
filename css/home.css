@@ -1,0 +1,419 @@
+main .introduction {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+main .introduction>* {
+    margin: 0;
+}
+
+main .introduction h1 {
+    font-size: 3rem;
+}
+
+main .introduction p {
+    font-size: 1.5rem;
+}
+
+main .introduction .social-links {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px;
+}
+
+main .introduction .social-links i {
+    padding: 10px;
+    cursor: pointer;
+}
+
+main .introduction .social-links .linkedin {
+    font-size: 1.5rem;
+    color: #3d77c7;
+}
+
+main .introduction .social-links .linkedin:hover {
+    background: linear-gradient(to right, #3d77c7, #195ab5);
+    color: #eee;
+
+}
+
+main .introduction .social-links .instagram {
+    font-size: 1.5rem;
+    color: #cc2366;
+    font-weight: 900;
+}
+
+main .introduction .social-links .instagram:hover {
+    background: radial-gradient(circle at 30% 30%,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%);
+    color: #eee;
+}
+
+main .introduction .shape-one,
+main .introduction .shape-two {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+main .introduction .shape-one {
+    background-image: url(../shape-one.png);
+    top: 100px;
+    right: -280px;
+}
+
+main .introduction .shape-two {
+    background-image: url(../shape-two.png);
+    bottom: -80px;
+    left: 0px;
+}
+
+main .projects>section {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    gap: 50px;
+    z-index: -1;
+}
+
+main .projects>section h2 {
+    font-size: 2rem;
+}
+
+main .projects>section .badge {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+main .projects>section p {
+    font-size: 1.2rem;
+}
+
+main .projects>section .img-with-bg {
+    position: relative;
+}
+
+main .projects>section .img-with-bg .circle {
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+}
+
+main .projects>section .img-with-bg img {
+    min-width: 300px;
+    max-width: 900px;
+    max-height: 65vh;
+    z-index: 2;
+    position: relative;
+}
+
+main .projects>section .project-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+main .projects>section .project-details>* {
+    margin: 0;
+}
+
+main .projects .schemeDark {
+    background-color: #190A46;
+    color: #eee;
+}
+
+main .projects .schemeDark .badge {
+    background-color: #F26A2C;
+}
+
+main .projects .schemeDark .circle {
+    background-color: #C27CFA;
+    left: -100px;
+}
+
+main .projects .schemeLight .badge {
+    background-color: #BB9179;
+    color: #eee;
+}
+
+main .projects .schemeLight .circle {
+    background-color: #534541;
+    left: -100px;
+
+}
+
+main .projects .schemeMedium {
+    background-color: #3B54FC;
+    color: #eee;
+}
+
+main .projects .schemeMedium .badge {
+    background-color: #F8B894;
+    color: #222;
+}
+
+main .projects .schemeMedium .circle {
+    background-color: #F8B894;
+    left: -100px;
+}
+
+main .contact {
+    padding: 20px 40px;
+    padding-top: 100px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .contact form label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+main .contact form .error {
+    color: rgb(213, 50, 50);
+    margin-top: -10px;
+}
+
+main .contact form input[type="email"],
+main .contact form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-color: #2349FF;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+main .contact form input[type="email"]:focus,
+main .contact form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 4px #1c3bd5;
+}
+
+main .contact textarea {
+    min-height: 150px;
+}
+
+main .contact button {
+    height: 40px;
+    width: 200px;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 600;
+    background-color: #2349FF;
+    border-radius: 8px;
+    color: #eee;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+main .contact button:hover {
+    background-color: #1935c4;
+}
+
+@media (max-width: 1200px) {
+
+    main .projects>section .img-with-bg img {
+        max-height: 60vh;
+        min-width: 200px;
+        max-width: 700px;
+    }
+
+    main .projects>section h2 {
+        font-size: 1.6rem;
+    }
+
+    main .projects>section .badge {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    main .projects>section p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 960px) {
+
+    main .introduction {
+        gap: 20px;
+    }
+
+    main .introduction h1 {
+        font-size: 2.1rem;
+    }
+
+    main .introduction p {
+        font-size: 1.5rem;
+    }
+
+    main .introduction .shape-one,
+    main .introduction .shape-two {
+        width: 300px;
+        height: 300px;
+    }
+
+    main .introduction .shape-one {
+        top: 50px;
+        right: -220px;
+    }
+    
+    main .introduction .shape-two {
+        bottom: 0;
+    }
+
+    main .projects>section {
+        flex-direction: column-reverse;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .projects>section .project-details {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    main .projects>section .img-with-bg .circle {
+        height: 400px;
+        width: 400px;
+    }
+
+    main .projects>section .img-with-bg img {
+        max-height: 50vh;
+        min-width: 200px;
+        max-width: 600px;
+    }
+
+
+    main .projects>section h2 {
+        font-size: 1.4rem;
+    }
+
+    main .projects>section .badge {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    main .projects>section p {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+
+    main .introduction .shape-one,
+    main .introduction .shape-two {
+        width: 250px;
+        height: 250px;
+    }
+
+    main .introduction .shape-one {
+        top: 30px;
+        right: -180px;
+    }
+
+    main .introduction h1 {
+        font-size: 1.5rem;
+    }
+
+    main .introduction p {
+        font-size: 1.1rem;
+    }
+
+    main .projects>section .project-details {
+        gap: 10px;
+    }
+
+    main .projects>section .img-with-bg .circle {
+        height: 300px;
+        width: 300px;
+    }
+
+    main .projects>section .img-with-bg img {
+        max-width: 500px;
+    }
+
+    main .projects>section h2 {
+        font-size: 1.2rem;
+    }
+
+    main .projects>section .badge {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 530px) {
+
+
+    main .introduction .shape-one,
+    main .introduction .shape-two {
+        width: 200px;
+        height: 200px;
+    }
+
+    main .introduction .shape-one {
+        top: 80px;
+        right: -140px;
+    }
+
+    main .introduction h1 {
+        font-size: 1.5rem;
+        align-self: flex-start;
+    }
+
+    main .introduction p {
+        font-size: 1rem;
+        align-self: flex-start;
+    }
+
+    main .projects>section .img-with-bg img {
+        max-width: 300px;
+    }
+
+
+    main .projects>section h2 {
+        font-size: 1.1rem;
+    }
+
+    main .projects>section .badge {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    main .projects>section p {
+        font-size: 1rem;
+    }
+}
