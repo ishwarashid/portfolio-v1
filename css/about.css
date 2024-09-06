@@ -9,11 +9,11 @@ main {
     padding-bottom: 100px;
 }
 
-main span{
+main span {
     color: #2349FF;
 }
 
-main h2{
+main h2 {
     text-align: center;
 }
 
@@ -24,17 +24,112 @@ main .skill-cards {
     gap: 40px;
 }
 
-main .skill-cards .skill-icon{
-    background-color: rgba(122, 143, 251, 0.171);
+main .skill-cards .skill-icon {
+    background-color: #7a8ffb2c;
     padding: 40px;
     border-radius: 20px;
     text-align: center;
 }
 
-main .skill-cards .skill-icon svg{
+main .skill-cards .skill-icon svg {
     width: 100px;
     height: 100px;
 }
+
+.experience {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.experience-timeline {
+    position: relative;
+}
+
+
+.experience-timeline::before {
+    content: "";
+    background-color: black;
+    height: 100%;
+    width: 5px;
+    position: absolute;
+    left: 50%;
+}
+
+.experience-timeline .container {
+    width: 50%;
+    position: absolute;
+    box-sizing: content-box;
+}
+
+.experience-timeline .left {
+    position: relative;
+    left: 0;
+
+}
+
+.experience-timeline .left::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: #2349FF;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    right: -15px;
+}
+
+.experience-timeline .left::before {
+    content: "";
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid rgba(122, 143, 251, 0.171);
+    position: absolute;
+    top: 25px;
+    right: 11px;
+}
+
+.experience-timeline .right {
+    position: relative;
+    left: 50%;
+}
+
+.experience-timeline .right::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: #2349FF;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: -10px;
+}
+
+.experience-timeline .right::after {
+    content: "";
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid rgba(122, 143, 251, 0.171);
+    position: absolute;
+    top: 25px;
+    left: 16px;
+}
+
+.experience-timeline .container .content {
+    padding: 20px;
+    background-color: rgba(122, 143, 251, 0.171);
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.experience-timeline .left .content {
+    margin-right: 26px;
+}
+
+.experience-timeline .right .content {
+    margin-left: 30px;
+}
+
 
 @media (max-width: 1200px) {
     main .skill-cards {
@@ -47,6 +142,40 @@ main .skill-cards .skill-icon svg{
     main .skill-cards {
         grid-template-columns: repeat(3, 1fr);
         gap: 40px;
+    }
+
+    .experience-timeline::before {
+        left: 100%;
+    }
+
+    .experience-timeline .container {
+        width: 100%;
+        left: 0;
+    }
+
+    .experience-timeline .right::before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        background-color: #2349FF;
+        border-radius: 50%;
+        position: absolute;
+        top: 25px;
+        left: calc(100% - 10px);
+    }
+
+    .experience-timeline .right::after {
+        content: "";
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid rgba(122, 143, 251, 0.171);
+        top: 25px;
+        left: calc(100% - 26px)
+    }
+
+    .experience-timeline .right .content {
+        margin-left: 0;
+        margin-right: 26px;
     }
 }
 
